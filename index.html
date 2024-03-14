@@ -7,12 +7,13 @@
     <title>ChetanPortfolio</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
     <header>
+        <!--Nav Bar Start-->
         <nav class="animate__animated animate__fadeInDown">
             <div class="logo">
                 <p>Chetan Patil</p>
@@ -27,18 +28,41 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
+            <div class="show-btn" id="show-btn" onclick="show_menu();">=</div>
         </nav>
+        <!--Nav Bar End-->
+        <!--Vertical Menu For Small Screens-->
+        <!--Start-->
+        <div class="nav-menu" id="nav-menu">
+            <div class="remove-btn" onclick="hide_menu();">X</div>
+            <ul type="none">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <!--End-->
+        <!--Header Body Section Start-->
         <section class="header-body">
             <div class="header-left animate__animated animate__fadeInLeft">
                 <div class="header-left-text">
                     <h2>Hello, I ' am</h2>
-                    <h1>Chetan Patil</h1>                    
-                        <ul>
-                            <li><i class="fa-solid fa-phone"></i><p>+91 9522112259 </p></li>
-                            <li><i class="fa-solid fa-envelope"></i><p>Patilchetan2905@gmail.com</p> </li>
-                            <li><i class="fa-solid fa-location-dot"></i><p>Nashik,Maharashtra,India</p></li>
-                        </ul>
-                    
+                    <h1>Chetan Patil</h1>
+                    <ul>
+                        <li><i class="fa-solid fa-phone"></i>
+                            <p>+91 9522112259 </p>
+                        </li>
+                        <li><i class="fa-solid fa-envelope"></i>
+                            <p>Patilchetan2905@gmail.com</p>
+                        </li>
+                        <li><i class="fa-solid fa-location-dot"></i>
+                            <p>Nashik,Maharashtra,India</p>
+                        </li>
+                    </ul>
+
                 </div>
             </div>
             <div class="header-right ">
@@ -46,22 +70,48 @@
                     <img src="Images/img-2.png" alt="">
                 </div>
             </div>
-             <div class="welcome_popup" id="welcome_popup">
+
+            <!--Pop Up welcome alert-->
+            <!--Start-->
+            <div class="welcome_popup" id="welcome_popup">
                 <h5 class="remove_btn" onclick="remove_popup();">x</h5>
-                 <h1>WELCOME TO MY PORTFOLIO</h1>
-                 <h3>Like ! Follow ! Share!</h3>
-                 <div class="popup-social-icons">
+                <h1>WELCOME TO MY PORTFOLIO</h1>
+                <h3>Like ! Follow ! Share!</h3>
+                <div class="popup-social-icons">
                     <i class="fa-brands fa-square-github" style="color:#333"></i>
                     <i class="fa-brands fa-linkedin" style="color:#0A66C2; "></i>
                     <i class="fa-brands fa-square-instagram" style="color:#f32170"></i>
                 </div>
-             </div>
+            </div>
+            <!--End-->
+            <!--Header Body End-->
         </section>
-        
-    <div class="fixed-background"></div>
+
+        <!--Header Footer Start-->
+        <div class="header-footer"  animate__animated animate__fadeInLeft>
+            <div class="box">
+                <h1><i class="fa-brands fa-linkedin" style="color:#0A66C2; "></i></h1>
+                <h2>200+ Connections</h2>
+            </div>
+            <div class="box">
+                <h1><i class="fa-brands fa-github" style="color:#333; "></i></h1>
+                <h2>5+ Repositorys</h2>
+            </div>
+            <div class="box">
+                <h1><i class="fa-brands fa-qualification" style="color:#0A66C2; "></i></h1>
+                <h2>MCA &nbsp;Pursuing </h2>
+            </div>
+
+        </div>
+        <!--Header Footer End-->
+        <!--Fixed Coding-Screen Background-->
+        <!--Start-->
+        <div class="fixed-background"></div>
+        <!--End-->
     </header>
     <main>
-        
+        <!--About Section Start -->
+
         <section class="about">
             <div class="about-body">
                 <div class="about-left">
@@ -70,54 +120,86 @@
                 <div class="about-right ">
                     <div class="about-text animate__animated animate__fadeInRight">
                         <h1>About Me</h1>
-                        <p>Hello! I'm Chetan Pratap Patil, From Nashik.I am first year MCA student at KK Wagh College Nashik. I completed my
-                            BBA Computer Application in 2023. I want to become web devloper.i have good knowldge of HTML, CSS, JavaScript, and Bootstrap and php.
+                        <p>Hello! I'm Chetan Pratap Patil, From Nashik.I am first year MCA student at KK Wagh College
+                            Nashik. I completed my
+                            BBA Computer Application in 2023. I want to become web devloper.i have good knowldge of
+                            HTML, CSS, JavaScript, and Bootstrap and php.
                             Honesty is my core strength, and I thrive in a collaborative team environment.I believe in
                             the power of teamwork to achieve shared goals.
                             My immediate goal is to secure a position at a reputed company where I can continue
                             learning, contribute actively, and showcase my skills. I'm eager to take on new challenges
                             and make a positive impact.</br>
                             I'm on a journey to enhance my skills and make meaningful contributions. If you're looking
-                            for a dedicated team player contact Me 
+                            for a dedicated team player contact Me
                             <br><br>
-                          <p style="float:right;">Thank You !</p>
+                        <p style="float:right;">Thank You !</p>
                         </p>
                     </div>
                 </div>
             </div>
         </section>
-
+        <!--About Section End-->
+        <!--Skills Section Start-->
         <section class="skills">
             <h1>MY SKILLS</h1>
             <div class="skills-body">
-                   <div class="skills-left">
+                <div class="skills-left">
                     <label>C</label><progress value="90" max="100"></progress>
                     <label>HTML</label><progress value="80" max="100"></progress>
                     <label>CSS</label><progress value="75" max="100"></progress>
                     <label>Bootstrap</label><progress value="40" max="100"></progress>
 
-                   </div>
-                   <div class="skills-right">
+                </div>
+                <div class="skills-right">
                     <label>C++</label><progress value="70" max="100"></progress>
                     <label>JavaScript</label><progress value="50" max="100"></progress>
                     <label>Core PHP</label><progress value="70" max="100"></progress>
                     <label>ReactJs</label><progress value="20" max="100"></progress>
-                   </div>
+                </div>
             </div>
         </section>
+        <!--Skills Section End-->
+
+        <!--Projects Section End-->
+        <section class="projects">
+            <h1 class="head-title">MY PROJECTS</h1>
+
+            <div class="projects-body">
+                <div class="project-card">
+                    <h2 class="project-name">MCA Department Website</h2>
+                    <h4 class="tech-stack">Tech Stack - HTML, CSS ,JavaScript</h4>
+                    <p class="project-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, illo.</p>
+                </div>
+                <div class="project-card">
+                    <h2 class="project-name">MCA Department Website</h2>
+                    <h4 class="tech-stack">Tech Stack - HTML, CSS ,JavaScript</h4>
+                    <p class="project-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, illo.</p>
+                </div>
+                <div class="project-card">
+                    <h2 class="project-name">MCA Department Website</h2>
+                    <h4 class="tech-stack">Tech Stack - HTML, CSS ,JavaScript</h4>
+                    <p class="project-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, illo.</p>
+                </div>
+                <div class="project-card">
+                    <h2 class="project-name">MCA Department Website</h2>
+                    <h4 class="tech-stack">Tech Stack - HTML, CSS ,JavaScript</h4>
+                    <p class="project-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, illo.</p>
+                </div>
+                <div class="project-card">
+                    <h2 class="project-name">MCA Department Website</h2>
+                    <h4 class="tech-stack">Tech Stack - HTML, CSS ,JavaScript</h4>
+                    <p class="project-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, illo.</p>
+                </div>
+                <div class="project-card">
+                   <h1 class="coming-soon-text">Updated Soon ! Stay Connected</h1>
+                </div>
+
+            </div>
+        </section>
+        <!--projects Section End-->
     </main>
-    <script>
-        let welcome_box =  document.getElementById("welcome_popup");
-   function remove_popup()
-        {
-            welcome_box.style.display="none";
-        }
-  setTimeout (function welcome_popup()
-    {
-        welcome_box.style.display="none";
-    },5000);
-    
-   
+    <!-- JavaScript External File Link-->
+    <script src="index.js">
     </script>
 </body>
 

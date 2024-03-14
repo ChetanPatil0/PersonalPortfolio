@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     padding: 0%;
@@ -5,7 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+/*header*/
 header{
     width: 100%;
     height: 100vh;
@@ -13,6 +14,7 @@ header{
    background-color:#1b1b1b;
        padding: 3% 0%;
        z-index: 1;
+       overflow: hidden;
 }
 .fixed-background{
     background:url('Images/coding_background\ .jpg');
@@ -49,6 +51,34 @@ nav{
     text-decoration: none;
     margin-left: 10px;
 }
+.show-btn,.remove-btn{
+    color:#1b1b1b;
+    font-weight: bold;
+    cursor: pointer;
+    font-size:20px;
+    display: none;
+}
+.remove-btn{
+    color: #fff;
+    position: absolute;
+    right:10%;
+    top: 0%;
+}
+.nav-menu{
+    width: 10%;
+    padding: 1.5%;
+    border-radius:5px;
+    background-color:rgba(0, 0,0,0.7);
+    margin-top: 5px;
+    position:absolute;
+    right:15%;
+    display: none;
+}
+.nav-menu a{
+  color: #fff;
+  text-decoration: none;
+}
+
 .header-body{
     width: 80%;
     height:73vh;
@@ -59,7 +89,7 @@ nav{
 .welcome_popup{
     width: 30%;
     border: 3px solid black;
-    background: rgba(0,0,0,0.3);
+    background: #1b1b1b;
     position: absolute;
     top: 20%;
     left:35%;
@@ -67,14 +97,14 @@ nav{
     padding:2%;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0px 0px 30px 1px crimson;
+    box-shadow: 0px 0px 30px 1px black;
 }
 .welcome_popup .remove_btn{
     position: absolute;
     font-size: 30px;
     right: 1%;
     top: 0;
-    color: red;
+    color: crimson;
     padding: 0% 2%;
     cursor: pointer;
 }
@@ -137,6 +167,43 @@ nav{
     width:20vw;
     height:23vw;
 }
+
+.header-footer{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.header-footer .box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    column-gap: 15px;
+    color: #fff;
+    background-color:#1b1b1b;
+    border-radius: 5px;
+    padding: 1% ;
+    text-align: center;
+}
+.header-footer .box:nth-child(1)
+{
+    box-shadow:inset 0px 0px 10px #0A66C2;
+}
+.header-footer .box:nth-child(2)
+{
+    box-shadow:inset 0px 0px 10px #333;
+}
+.header-footer .box:nth-child(3)
+{
+    box-shadow:inset 0px 0px 10px green;
+}
+.header-footer .box i,h2{
+    font-size:larger;
+}
+
+/* About Section Start */
 .about{
     width: 100%;
     height: auto;
@@ -178,6 +245,8 @@ nav{
     font-size: 16px;
     margin-top: 10px;
 }
+/* About Section End */
+/* Skills Section Start */
 .skills{
     width: 100%;
     height: auto;
@@ -215,16 +284,60 @@ nav{
     display: grid;
     width: 40%;
 }
+/* Skills Section End */
+/* Project Section Start */
+.projects{
+    width: 100%;
+    height: auto;
+    background-color: #1b1b1b;
+    padding: 0% 0% 5% 0%;
+}
+.projects-body{
+     width: 80%;
+     margin: auto;
+     display: flex;
+     justify-content:center;
+     flex-wrap: wrap;
+     gap: 40px;
+}
+.projects .head-title{
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    padding: 40px;
+}
 
+.project-card {
+    max-width: 350px;
+    background-color:rgba(255, 255, 255, 0.2);
+    padding:15px;
+    border-radius: 10px;
+}
+.tech-stack{
+    text-align: center;
+}
+.project-name{
+    text-align: center;
+}
+.project-desc{
+    text-align: justify;
+}
+.project-card .coming-soon-text{
+       font-size:xx-large;
+       color: gray;
+       text-align: center;
+}
+/* Project Section End */
 
+/*
 
-
-
+/* Resposive CSS According to Screens Size*/
 
 @media (min-width:100px) and (max-width:1200px){
     .nav-items{
         display: none;
     }
+    
     .header-body{
         display:flex;
         flex-direction: column-reverse;
@@ -259,6 +372,7 @@ nav{
         width: 90%;
         height:80%;
     }
+    
     .about-body{
         display:grid;
     }
@@ -281,10 +395,26 @@ nav{
         margin: auto;
     }
 }
+@media (min-width:100px) and (max-width:480px){
+    .nav-menu{
+        width: 20%;
+      }
+       .show-btn,.remove-btn{
+           display: block;
+       }
+       .header-footer .box i,h2{
+        font-size:smaller;
+    }
+}
 @media (min-width:481px) and (max-width:768px){
+   .nav-menu{
+     width: 15%;
+   }
+    .show-btn,.remove-btn{
+        display: block;
+    }
     .header-left-text h1{
         font-size:60px;
-
     }
     .header-left-text p{
         font-size: 16px;
@@ -337,3 +467,4 @@ nav{
             font-size: 14px;
         }
         }
+        
