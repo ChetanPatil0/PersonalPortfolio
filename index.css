@@ -23,7 +23,7 @@ header{
     height:110vh;
     background-size:cover;
     position: fixed;
-    margin-top:-85vh;
+    margin-top:-90vh;
     z-index: -2;
 }
 nav{
@@ -215,7 +215,8 @@ nav{
     width: 80%;
     display:flex;
     margin: auto;
-    background-color: rgba(205, 13, 71, 0.9);
+    /* background-color: rgba(205, 13, 71, 0.9); */
+    background-color: #1b1b1b;
     border-radius: 10px;
 }
 .about-left{
@@ -309,9 +310,10 @@ nav{
 
 .project-card {
     max-width: 350px;
-    background-color:rgba(255, 255, 255, 0.2);
+    background-color:#1b1b1b;
     padding:15px;
     border-radius: 10px;
+    box-shadow: 0px 0px 15px #0A66C2;
 }
 .tech-stack{
     text-align: center;
@@ -322,6 +324,42 @@ nav{
 .project-desc{
     text-align: justify;
 }
+
+.project-card .buttons{
+    display: flex;
+    justify-content: space-around;
+}
+.project-card button a{ 
+    border-radius: 5px;
+    padding:5px 20px;
+    background-color: #1b1b1b;
+    text-decoration: none;
+    font-weight: bold;
+}
+.project-card button{
+    border: none;
+    margin-top: 30px;
+}
+
+.project-card .sourcecode-btn a{
+    border: 2px solid orange;
+    color: orange;
+}
+.project-card .liveview-btn a{
+    border: 2px solid lime;
+    color: lime;
+    text-decoration: none;
+}
+.project-card .liveview-btn a:hover{
+    background-color: lime;
+    color:  #1b1b1b;
+    box-shadow: inset 0px 0px 5px #1b1b1b;
+}
+.project-card .sourcecode-btn a:hover{
+    background-color: orange;
+    color:  #1b1b1b;
+    box-shadow: inset 0px 0px 5px #1b1b1b;
+}
 .project-card .coming-soon-text{
        font-size:xx-large;
        color: gray;
@@ -329,7 +367,10 @@ nav{
 }
 /* Project Section End */
 
-/*
+
+
+
+
 
 /* Resposive CSS According to Screens Size*/
 
@@ -396,6 +437,10 @@ nav{
     }
 }
 @media (min-width:100px) and (max-width:480px){
+    .header-right-img{
+        width:60%;
+        height:40vw;
+    }
     .nav-menu{
         width: 20%;
       }
