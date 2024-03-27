@@ -375,17 +375,12 @@ nav{
     background-size: cover;
 }
 .contactUs-body{
-    max-width:40%;
-    background-color:rgba(0, 0,0,0.2);
+    max-width:60vh;
     margin: auto;
-    position:relative;
-    top: 10vh;
+    background-color:rgba(0, 0,0,0.2);
     box-shadow:0px 0px 10px 5px black;
     border-radius: 5px;
-    padding: 2% 5%;
-}
-.contactUs-body form{
-    width: 70%
+    padding: 2% 5%;;
 }
 .contactUs-body label{
     color:#ff6b08;
@@ -397,6 +392,10 @@ nav{
     border-bottom: 2px #fff solid;
     background:none;
     color: #fff;
+}
+.contactUs-body td{
+
+ display:block;
 }
 
 
