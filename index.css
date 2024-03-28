@@ -315,14 +315,20 @@ nav{
     border-radius: 10px;
     box-shadow: 0px 0px 15px #0A66C2;
 }
-.tech-stack{
-    text-align: center;
-}
+
 .project-name{
+    color: #dedddd;
     text-align: center;
 }
 .project-desc{
+    color: #747474;
     text-align: justify;
+    font-size: 12px;
+}
+.tech-stack{
+    text-align: center;
+    font-size: 16px;
+    color: #ddddddcf;
 }
 
 .project-card .buttons{
