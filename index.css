@@ -436,6 +436,13 @@ nav{
     background:none;
     color: #fff;
 }
+.contactUs-body .mail-submit-btn{
+    padding: 5px 15px ;
+    font-weight: 700;
+    background-color:#ff6b08;
+    border:#ff6b08 3px solid;
+    border-radius: 3px;
+}
 .contactUs-body td{
     padding: 10px;
 }

@@ -235,23 +235,29 @@
                             <tr>
                                 <td>
                                     <label for="name">Name </label> <br>
-                                    <input type="text" name="name" placeholder="Enter Your Name">
+                                    <input type="text" name="name" placeholder="Enter Your Name" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label for="mail">Email ID</label><br>
-                                    <input type="email" name="mail" placeholder="Enter Your Email">
+                                    <input type="email" name="mail" placeholder="Enter Your Email" required>
                                 </td>
                             </tr>
                             <tr><br>
                                 <td>
                                     <label for="mobile">Mobile No </label><br>
-                                    <input type="tel" name="mobile" placeholder="Enter Your Mobile No">
+                                    <input type="tel" name="mobile" placeholder="Enter Your Mobile No (Optional)">
                                 </td>
                             </tr>
                             <tr>
-                                <td> <button type="submit">Submit</button></td>
+                                <td>
+                                    <label for="message">Message</label><br>
+                                    <textarea name="message" id="" cols="50" rows="5" placeholder="Enter your any message,Query..." style="background:none;"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> <button type="submit" class="mail-submit-btn">Send</button></td>
                             </tr>
                     </table>
                 </div>
