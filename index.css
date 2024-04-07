@@ -389,23 +389,30 @@ nav{
     height:fit-content;
     background: url('Images/black_bg_2.jpg');
     background-size: cover;
-    padding-top:5%;
+}
+.contactUs .title{
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    padding: 40px;
 }
 .contactUs-body{
     max-width:50%;
     margin: auto;
-    background-color:rgba(0, 0,0,0.2);
-    box-shadow:0px 0px 10px 5px black;
+    background-color:rgba(0, 0,0,0.6);
+    box-shadow:0px 0px 10px 5px #ff440075;
     border-radius: 5px;
-    padding: 2% 0% 4% 5%;
+    padding: 0% 0% 2% 5%;
     display: flex;
 }
 .contactUs-body .leftside{
     width: 40%;
+    border-right: 5px solid orangered;
 }
 .contactUs-body .leftside{
      text-align: center;
      margin: auto;
+     padding-right:3%;
 }
 .contactUs-body .leftside h1{
    color: #fff;
@@ -418,7 +425,7 @@ nav{
 }
 .contactUs-body .rightside{
     width: 60%;
-    margin-left:3%;
+    margin-left:2%;
 }
 .contactUs-body table{
     width: 80%;
