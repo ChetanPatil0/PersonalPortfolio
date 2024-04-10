@@ -450,6 +450,10 @@ nav{
     border:#ff6b08 3px solid;
     border-radius: 3px;
 }
+.mail-submit-btn:hover{
+    background:none;
+    color: #ff6b08;
+}
 .contactUs-body td{
     padding: 10px;
 }
