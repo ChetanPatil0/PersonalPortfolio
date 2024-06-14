@@ -432,14 +432,25 @@ nav{
     color:#ff6b08;
     margin-top: 50px;
 }
-.contactUs-body input{
-    width: 100%;
+.contactUs-body input:focus{
+    outline-style: none;
+    border-bottom: 2px grey solid;
 }
 .contactUs-body input{
+    width: 80%;
     border: none;
     border-bottom: 2px #fff solid;
     background:none;
     color: #fff;
+    padding:5px  0px;
+}
+
+.contactUs-body textarea{
+    width: 80%;
+    color:#fff ;
+    border-bottom: 2px #fff solid;
+    resize:none;
+    padding: 5px 5px;
 }
 .contactUs-body .mail-submit-btn{
     padding: 5px 15px ;
