@@ -468,11 +468,35 @@ nav{
 }
 
 
-
-
-
 /* contact us Section End */
+  footer{
+    width: 100%;
+    background-color: black;
+    color: #fff;
+  }
+  .footer-main{
+    width: 80%;
+    margin: auto;
+  }
+  .footer-main h1{
+    width: 20%;
+    background:linear-gradient(120deg,#ff6b08,#f32170,#cf23cf);
+    text-align: center;
+    margin: auto;
+    border-radius: 30px;
+  } 
+  .footer-main ul{
+    width: 40%;
+    margin: auto;
+    list-style: none;
+    display: flex;
+  justify-content: space-around;
+    
+  }
+/* footer section */
 
+
+/* footer section end */
 
 
 
