@@ -1,0 +1,79 @@
+/* Admin Home page Css */
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: sans-serif;
+}
+header{
+    width: 100%;
+    background-color: #1d1d1d;
+}
+nav{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+nav h1{
+    font-size: larger;
+    color: aliceblue;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    font-size:large;
+    justify-content: space-between;
+}
+nav ul > li{
+    margin: 20px;
+}
+nav ul > li > a{
+    color:white;
+    text-decoration: none;
+}
+main{
+    width:100%;
+}
+table{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+thead{
+    text-align: center;
+    
+    font-size: larger;
+    font-weight: bold;
+}
+tr{
+    background-color: #626262;
+    color: #fff;
+}
+td{
+    text-align: center;
+    padding: 5px;
+}
+.button{
+    display: flex;
+    justify-content: space-around;
+}
+.button button{
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+}
+.button button:first-child{
+    background-color:#0A66C2;
+    cursor: pointer;
+}
+.button button:last-child{
+    background-color:crimson;
+    cursor: pointer;
+}
+tr:nth-child(odd){
+    background-color: #3e3e3e;
+}
+

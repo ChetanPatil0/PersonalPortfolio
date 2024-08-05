@@ -14,6 +14,7 @@
 
 <body>
     <header >
+    <h5 style="float:right; text-decoration:none;  margin-right:20px;"><a href="admin.php" style="color:#fff">Admin</a></h5>
         <!--Nav Bar Start-->
         <nav class="animate__animated animate__fadeInDown">
             <div class="logo">
@@ -254,6 +255,7 @@
                         <li><i class="fa-brands fa-square-facebook"></i></li>
                      </ul>
                      <br>
+                     
             </div>
         </footer>
     </main>

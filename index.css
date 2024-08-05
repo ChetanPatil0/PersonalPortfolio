@@ -319,7 +319,7 @@ nav{
 }
 
 .project-card {
-    max-width: 350px;
+    width: 350px;
     background-color:#1b1b1b;
     padding:15px;
     border-radius: 10px;
@@ -376,11 +376,7 @@ nav{
     color:  #1b1b1b;
     box-shadow: inset 0px 0px 5px #1b1b1b;
 }
-.project-card .coming-soon-text{
-       font-size:xx-large;
-       color: gray;
-       text-align: center;
-}
+
 /* Project Section End */
 
 /* contact us Section Start */
@@ -492,6 +488,21 @@ nav{
     display: flex;
   justify-content: space-around;
     
+  }
+  .footer-main > ul > li{
+    font-size: 30px;
+  }
+  .footer-main > ul > li:nth-child(1){
+         color: crimson;
+  }
+  .footer-main > ul > li:nth-child(2){
+    color: #0A66C2;
+  }
+  .footer-main > ul > li:nth-child(3){
+
+  }
+  .footer-main > ul > li:nth-child(4){
+         color:#0A66C2;
   }
 /* footer section */
 
