@@ -1,3 +1,15 @@
+
+<?php
+session_start();
+
+if (isset($_SESSION['userid'])) {
+    $userid = $_SESSION['userid'];
+    $userid = $_SESSION['name'];
+} else {
+    header("Location: login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +30,7 @@
                         <li><a href="">Messages</a></li>
                         <li><a href="add.php">Add Project</a></li>
                     </ul>
-                    <h1>LOGOUT</h1>
+                    <h1><a href="logout.php">LOGOUT</a></h1>
         </nav>
     </header>
     <main>
@@ -47,7 +59,10 @@
                             <td style="text-align:justify;"><?php echo $Data['Description'] ?></td>
                             <td><?php echo $Data['TechStack'] ?></td>
                             <td class="button">
-                                 <button>Modify</button>
+                        
+                            
+                                    <button type="submit" name="Update" href="update.php" ><a href="update.php">Update</a></button>
+                                
                                 <form action="delete.php" method="post">
                                     <input type="hidden" name="Id" value="<?php echo $Data['ProjectID'] ?>">
                                     <button type="submit" name="Delete">Delete</button>

@@ -1,41 +1,42 @@
-<?php
-include 'conn.php';
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $Title = $_POST['ptitle'];
-    $Description = $_POST['PDescription'];
-    $TechStack = $_POST['PTechstack'];
-    $CodeLink = $_POST['pcodelink'];
-    $ProjectIOLink = $_POST['poutputlink'];
+<?php 
+require 'conn.php';
 
-    // echo '<script>alert("Failed To Add  "); window.location.href="add.php";</script>';
-    echo `<script>alert('$Title');</script>`;
+if($_SERVER['REQUEST_METHOD']=='POST')
+{
+    $userid = $_POST['userid'];
+    $password = $_POST['password'];
+
+    $query = "SELECT * FROM `adminlogin` WHERE userid=$userid and password=$password";
+    $result = mysqli_query($conn, $query);
     
-    $Query = "INSERT INTO project (ProjectId,Title, Description, TechStack, CodeLink, ProjectIOLink) VALUES ('','$Title', '$Description', '$TechStack', '$CodeLink', '$ProjectIOLink')";
-    $Result = mysqli_query($conn, $Query);
+    if (mysqli_num_rows($result) > 0) {
+           session_start();
+           $row = mysqli_fetch_assoc($result);
 
+            $_SESSION['userid'] = $row['userid'];
+            $_SESSION['name'] = $row['name'];
 
-        if ($Result) {
-            echo '<script>alert("Project Add Successfully"); window.location.href="admin.php";</script>';
-        } else {
-            // echo '<script>alert("Failed To Add Project,Fill form Again"); window.location.href="add.php";</script>';
-            $error = mysqli_error($conn);
-             echo '<script>alert("Failed To Add Project: ' . $error . '"); window.location.href="add.php";</script>';
-             }
-        
-
+         header("Location: admin.php?status=" . $row['userid']);
+    } 
+    else {
+             echo "<script>
+                        alert('Consumer No and Password Not Match'); 
+                        window.location.href='login.php'; 
+              </script>";  
+             
+    }
     mysqli_close($conn);
 }
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project ADD Page</title>
+    <title>Admin Login page</title>
     <link rel="stylesheet" href="style.css">
+
     <style>
         main {
             width: 100%;
@@ -48,21 +49,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             padding: 10px 5px;
             background-color: crimson;
         }
-
-        .ProjectAddForm {
+        form {
             border: black solid 3px;
-            max-width: 60vh;
+            max-width: 50vh;
             margin: auto;
             border-radius: 5px;
             box-shadow: gray 0px 0px 20px 5px;
         }
-
         .FormFields {
             padding: 10px 30px 30px 30px;
             display: grid;
         }
 
-        .FormFields>label {
+        .FormFields label {
             font-weight: bold;
             margin: 10px 0px 2px 0px;
             text-transform: uppercase;
@@ -73,8 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             color: red;
         }
 
-        .FormFields input,
-        textarea {
+        .FormFields input{
             font-size: 20px;
             padding: 5px;
         }
@@ -117,9 +115,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </style>
 </head>
-
 <body>
-    <header>
+    
+<header>
         <nav>
             <h1>ADMIN<h1>
                     <ul>
@@ -128,36 +126,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <li><a href="">Messages</a></li>
                         <li><a href="add.php">Add Project</a></li>
                     </ul>
-                    <h1><a href="logout.php"></a></h1>
+                    <h1>LOGOUT</h1>
         </nav>
     </header>
     <main>
-
-        <form action="add.php" method="Post" class="ProjectAddForm">
-            <h2 class="FormTitle">Add New Project</h2>
+    <form action="login.php" method="Post">
+            <h2 class="FormTitle">Admin Login</h2>
             <div class="FormFields">
-                <label for="ptitle">Project Title <span>*</span></label>
-                <input type="text" name="ptitle" required>
+                <label>User Id<span>*</span></label>
+                <input type="text" name="userid" required>
 
-                <label for="pdescription">Project Description<span>*</span></label>
-                <textarea type="text" name="PDescription" rows="5" required></textarea>
-
-                <label for="ptechstack">Project TechStack<span>*</span></label>
-                <input type="text" name="PTechstack" required>
-
-                <label for="pcodelink">Project Code Link<span>*</span></label>
-                <input type="text" name="pcodelink" required>
-
-                <label for="poutputlink">Project Output Link<span>*</span></label>
-                <input type="text" name="poutputlink" required>
-
+                <label>Password<span>*</span></label>
+                <input type="password" name="password" required>
                 <div class="Buttons">
                     <button type="reset">RESET</button>
                     <button type="submit" name="sumbit">SUBMIT</button>
                 </div>
             </div>
         </form>
-    </main> 
+    </main>
 </body>
-
 </html>
